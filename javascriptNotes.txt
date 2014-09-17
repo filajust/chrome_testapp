@@ -1,0 +1,72 @@
+Javascript Notes:
+
+Misc:
+----
+document.write(<str>) - writes to page
+
+typeof(<var>) // prints out type of variable
+parseInt(<var>) // converts to integer
+float_var.toFixed(<int>) // rounds floating point to that many digits
+Number(<str>) // converts string to number
+Number.MAX_VALUE // max value
+Number.MIN_VALUE // min value
+String(<num>) // converts number to string
+
+Arrays:
+------
+var myArray = new Array("car", "truck", "van");
+myArray[1] // how to index into array
+
+Functions:
+---------
+function addThese(numberOne, numberTwo)
+{
+	var total = numberOne + numberTwo;
+	return total;
+}
+
+Loops:
+-----
+for (i in myArray)
+{
+	myArray[i] ... // do stuff
+}
+
+while(count <= 10)
+
+If:
+--
+if (5 > 10)
+{
+	// do stuff
+}
+else if (5 < 10)
+{
+	// do other stuff
+}
+else
+{
+	// do other stuff
+}
+
+Switch:
+------
+var state = "Pennsylvania";
+switch (state)
+{	
+	case "California":
+		// do stuff
+		break;
+
+	case "Penn":
+		// do other stuff;
+		break;
+
+	case default:
+		// do other stuff;
+		break;
+}
+
+Conditional Operator:
+--------------------
+var rand_var = (5 < 10) ? "5 less" : "5 greater or eql";

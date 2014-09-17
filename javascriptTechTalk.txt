@@ -1,0 +1,61 @@
+Javascript Overview
+
+Objects:
+-------
+var obj1 = new Object();
+var obj2 = {};
+
+typeof obj1 ==> "object"
+obj1 instanceof Object ==> true
+obj1.contructor ==> Object
+
+obj1.name = "JavaScript";
+obj["name"] ==> "JavaScript";
+
+Prototype Chains:
+----------------
+var vehicle = { powered: true };
+var volvo = { seats: 4 };
+
+volvo.seats ==> 4
+volvo.powered ==> undefined
+
+volvo.__proto__ = vehicle; // setting parent to vehicle
+volvo.powered ==> true
+
+volvo.powered = 'gasoline';
+volvo.powered ==> 'gasoline' // volvo's is changed
+vehicle.powered ==> true
+volvo.__proto__.powered ==> true // parent is still true
+
+Functions:
+---------
+function add(a, b) { return a + b; }
+var negate = function(a) { return -a; }; // anonymous function
+
+add(1, 2) ==> 3
+		// vv array of arguments
+add.apply(null, [1, 2]) ==> 3
+	     // vv same as apply but no array	
+add.call(null, 1, 2)
+typeof add ==> 'function'
+add.name ==> 'add'
+add.length ==> 2
+
+var negate2 = new Function('a', 'return -a;'); // can call Function ctr to 
+					       // instantiate function
+
+Function Closure:
+----------------
+function greeter(salutation)
+{
+	var counter = 0;
+	var prefix = '. ' + salutation + ' ';
+	return function(name) {
+		counter ++;
+		return counter + prefix + name + '!';
+	};
+}
+var greet = greeter('Hello');
+greet('World') ==> '1. Hello World!'
+greet('World') ==> '2. Hello World!'
