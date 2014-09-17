@@ -1,21 +1,38 @@
 {
-  "manifest_version": 2,
-  "name": "Google_Drive",
-  "short_name": "Google_Drive",
-  "description": "Description for Google_Drive",
-  
-  "permissions": ["storage"],
-  
-  "version": "0.0.1.0",
+    "manifest_version": 2,
+    "name": "Google_Drive",
+    "short_name": "Google_Drive",
+    "description": "Description for Google_Drive",
 
-  "icons": {
-    "16": "assets/icon_16.png",
-    "128": "assets/icon_128.png"
-  },
+    "version": "0.0.1.0",
 
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
+    "icons": {
+        "16": "assets/icon_16.png",
+        "128": "assets/icon_128.png"
+    },
+
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+
+    "permissions": [
+        "identity", "clipboardRead", "clipboardWrite", "webview", "<all_urls>",
+
+        "https://apis.google.com/*",
+        "https://www.googleapis.com/",
+        "https://docs.google.com/feeds/",
+        "https://*.googleusercontent.com/",
+        "https://spreadsheets.google.com/feeds/",
+        "https://ssl.gstatic.com/",
+        "https://accounts.google.com/"
+    ],
+    "oauth2": {
+        "client_id": "96757318776-5h1b61qef06pv7bahma3pj579rdo27ar.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/drive"
+        ]
+
     }
-  }
 }
