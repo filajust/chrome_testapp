@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Angular Todo",
+    "version": "1",
+    "app": {
+        "background": {
+            "scripts": ["main.js"]
+        }
+    }
+}
